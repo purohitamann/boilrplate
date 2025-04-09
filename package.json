@@ -9,13 +9,13 @@
   "keywords": [
     "boilrplate"
   ],
-  "git":{
-
-  },
+  "git": {},
   "bin": {
-  "boilrplate": "./bin/index.js"
-}
-,
+    "boilrplate": "./bin/index.js"
+  },
   "author": "Aman Purohit",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^11.3.0"
+  }
 }
