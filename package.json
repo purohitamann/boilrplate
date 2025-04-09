@@ -13,7 +13,7 @@
 
   },
   "bin": {
-  "create-fullstack-app": "./bin/index.js"
+  "boilrplate": "./bin/index.js"
 }
 ,
   "author": "Aman Purohit",
