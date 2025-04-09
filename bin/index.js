@@ -2,4 +2,5 @@
 const { createFullstackApp } = require('../lib/create');
 
 const args = process.argv.slice(2);
-createFullstackApp(args);
+const appName = args[0] || 'app';
+createFullstackApp(appName, 'express');
