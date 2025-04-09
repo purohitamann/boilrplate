@@ -1,0 +1,21 @@
+{
+  "name": "boilrplate",
+  "version": "1.0.0",
+  "description": "generate full-stack app boilerplate  with one command",
+  "main": "node index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "boilrplate"
+  ],
+  "git":{
+
+  },
+  "bin": {
+  "create-fullstack-app": "./bin/index.js"
+}
+,
+  "author": "Aman Purohit",
+  "license": "ISC"
+}
