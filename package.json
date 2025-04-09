@@ -16,6 +16,8 @@
   "author": "Aman Purohit",
   "license": "ISC",
   "dependencies": {
-    "fs-extra": "^11.3.0"
+    "execa": "^9.5.2",
+    "fs-extra": "^11.3.0",
+    "inquirer": "^12.5.2"
   }
 }
