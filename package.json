@@ -2,9 +2,10 @@
   "name": "boilrplate",
   "version": "1.0.0",
   "description": "generate full-stack app boilerplate  with one command",
-  "main": "node index.js",
+  "main": "node ./bin/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+       "start": "node ./bin/index.js"
   },
   "keywords": [
     "boilrplate"
@@ -13,12 +14,17 @@
   "bin": {
     "boilrplate": "./bin/index.js"
   },
+  "type": "module",
+
   "author": "Aman Purohit",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.8.4",
+    "chalk": "^5.4.1",
     "execa": "^9.5.2",
     "fs-extra": "^11.3.0",
     "inquirer": "^12.5.2",
+    "ora": "^8.2.0",
     "path": "^0.12.7"
   }
 }
