@@ -5,7 +5,7 @@
   "main": "node ./bin/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-       "start": "node ./bin/index.js"
+    "start": "node ./bin/index.js"
   },
   "keywords": [
     "boilrplate"
@@ -15,7 +15,6 @@
     "boilrplate": "./bin/index.js"
   },
   "type": "module",
-
   "author": "Aman Purohit",
   "license": "ISC",
   "dependencies": {
@@ -24,6 +23,7 @@
     "execa": "^9.5.2",
     "fs-extra": "^11.3.0",
     "inquirer": "^12.5.2",
+    "minimist": "^1.2.8",
     "ora": "^8.2.0",
     "path": "^0.12.7"
   }
