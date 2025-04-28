@@ -1,6 +1,6 @@
 {
   "name": "boilrplate",
-  "version": "1.0.0",
+  "version": "1.1.2",
   "description": "generate full-stack app boilerplate  with one command",
   "main": "node ./bin/index.js",
   "scripts": {

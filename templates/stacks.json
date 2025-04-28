@@ -1,0 +1,6 @@
+{
+    "frontend": ["Next.js", "React", "Vue.js", "Svelte"],
+    "backend": ["Express.js", "FastAPI", "NestJS", "Django"],
+    "fullstack": ["Next.js + Express.js", "Next.js + FastAPI", "React + NestJS", "Vue.js + Django"]
+  }
+  
