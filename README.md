@@ -1,6 +1,6 @@
 # boilrplate
 
-Scaffold fullstack apps instantly. Prebuilt templates today, AI-powered project generation tomorrow.
+Scaffold fullstack apps instantly—prebuilt templates today, AI-powered project generation tomorrow.
 
 ---
 
@@ -20,21 +20,18 @@ Scaffold fullstack apps instantly. Prebuilt templates today, AI-powered project 
 # Use with npx (no install needed)
 npx boilrplate
 
-# (Optional) Install globally
+# (Optional) Install globally https://github.com/purohitamann/boilrplate/blob/master/README.md
 npm install -g boilrplate
+
 boilrplate
+
 Quick Start
 Pick a stack:
 
-bash
-Copy
-Edit
 npx boilrplate
+
 (Coming soon) Scaffold using natural language and access code:
 
-bash
-Copy
-Edit
 npx boilrplate "I want a Next.js + MongoDB app" --access YOUR-ACCESS-CODE
 Roadmap
 Full AI-powered project generation (private beta)
@@ -50,4 +47,4 @@ View documentation at boilrplate.com/docs
 
 License
 This project is licensed under a commercial license.
-See Terms of Service for usage guidelines.
+Please take a look at the Terms of Service for usage guidelines.
