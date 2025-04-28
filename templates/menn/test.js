@@ -1,1 +1,0 @@
-console.log("yo!! Hi It's Aman, I'm creating a package that will swiftly setup your fullstack app with just one command, checkback soon!!");

@@ -22,8 +22,6 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import fs from 'fs-extra';
 import minimist from 'minimist';
-
-
 import { randomWaitlistMessage } from '../lib/waitlist.js'; 
 
 const __filename = fileURLToPath(import.meta.url);
@@ -48,7 +46,7 @@ async function runCLI() {
     if (accessCode === VALID_ACCESS_CODE) {
       console.log('🧠 Access code accepted! Unlocking AI-powered setup...');
       // 🚀 Here you trigger the AI prompt backend
-      await runAIMode(input);
+      runAIMode(input);
     } else {
       console.log(randomWaitlistMessage());
       console.log(`
@@ -108,6 +106,7 @@ async function runCLI() {
 }
 
 runCLI();
+
 function runAIMode(){
     createFullstackApp(prompt);
 }
