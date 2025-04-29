@@ -1,21 +1,5 @@
 #!/usr/bin/env node
-
-// // process.env.ENVIRONMENT = 'production';
-// // process.env.NEXT_PUBLIC_BACKEND_URL = 'https://manicode-backend.onrender.com';
-// // process.env.NEXT_PUBLIC_APP_URL = 'https://codebuff.com';
-// // process.env.NEXT_PUBLIC_SUPPORT_EMAIL = 'support@codebuff.com';
-
-import { createFullstackApp } from '../lib/create.js';
-const args = process.argv.slice(2);
-const prompt = args.join(' ') || 'I want to create a Next.js app';
-
-
-
-// // GOAL
-
-// // npx boilrplate "I want to create a Stitic protfolio using next"
-
-
+import { createFullstackAppUsingAI } from '../lib/create.js';
 import inquirer from 'inquirer';
 import { createProject } from '../lib/create.js';
 import { fileURLToPath } from 'url';
@@ -24,28 +8,25 @@ import fs from 'fs-extra';
 import minimist from 'minimist';
 import { randomWaitlistMessage } from '../lib/waitlist.js'; 
 
+const args = process.argv.slice(2);
+const prompt = args.join(' ') || 'I want to create a Next.js app';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// Load the stacks
 const stacks = await fs.readJson(join(__dirname, '../templates/stacks.json'));
 
-console.log('👋 Welcome to boilrplate CLI!\n');
+console.log('Welcome to boilrplate CLI!\n');
 const argv = minimist(process.argv.slice(2));
 const accessCode = argv.access;
 
-const VALID_ACCESS_CODE = 'BOILR-ACCESS-2025'; // hardcoded for now
-
-
-  
+const VALID_ACCESS_CODE = 'BOILR-ACCESS-2025';
 
 async function runCLI() {
     const input = argv._.join(' ').trim();
 
   if (input) {
     if (accessCode === VALID_ACCESS_CODE) {
-      console.log('🧠 Access code accepted! Unlocking AI-powered setup...');
-      // 🚀 Here you trigger the AI prompt backend
+      console.log('Access code accepted! Unlocking AI-powered setup...');
       runAIMode(input);
     } else {
       console.log(randomWaitlistMessage());
@@ -66,7 +47,7 @@ async function runCLI() {
         { name: 'Frontend', value: 'frontend' },
         { name: 'Backend', value: 'backend' },
         { name: 'Fullstack', value: 'fullstack' },
-        { name: '🧠 Custom AI-Powered Setup (Coming Soon 🚀)', value: 'ai' }
+        { name: 'Custom AI-Powered Setup (Coming Soon 🚀)', value: 'ai' }
       ]
     }
   ]);
@@ -75,10 +56,10 @@ async function runCLI() {
     console.log(`
 🚧 AI-powered custom scaffolding is still under development!
 
-🎯 Join the waitlist and get early access:
-🔗 https://www.heyboilrplate.com
+Join the waitlist and get early access:
+https://www.heyboilrplate.com
 
-📚 Meanwhile, explore predefined templates today!
+Meanwhile, explore predefined templates today!
 `);
     return;
   }
@@ -97,16 +78,14 @@ async function runCLI() {
       type: 'input',
       name: 'appName',
       message: 'Name your project folder:',
-      default: 'my-boilr-app'
+      default: 'my-boilrplate-app'
     }
   ]);
-
-  // Create the project now
   await createProject({ type, framework, appName });
 }
 
 runCLI();
 
 function runAIMode(){
-    createFullstackApp(prompt);
+    createFullstackAppUsingAI(prompt);
 }

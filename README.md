@@ -20,7 +20,6 @@ Scaffold fullstack apps instantly—prebuilt templates today, AI-powered project
 # Use with npx (no install needed)
 npx boilrplate
 
-# (Optional) Install globally https://github.com/purohitamann/boilrplate/blob/master/README.md
 npm install -g boilrplate
 
 boilrplate
