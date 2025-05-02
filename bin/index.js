@@ -8,6 +8,7 @@ import fs from 'fs-extra';
 import minimist from 'minimist';
 import { randomWaitlistMessage } from '../lib/waitlist.js'; 
 
+import { createAppFromStack } from '../lib/createFromStack.js';
 const args = process.argv.slice(2);
 const prompt = args.join(' ') || 'I want to create a Next.js app';
 const __filename = fileURLToPath(import.meta.url);
@@ -89,3 +90,15 @@ runCLI();
 function runAIMode(){
     createFullstackAppUsingAI(prompt);
 }
+
+const argsv = minimist(process.argv.slice(2));
+const [frontend, backend, database] = argsv._;
+const appName = argsv.name || 'boilr-app';
+const flat = argsv.flat || false;
+
+if (!frontend || !backend) {
+  console.log(`Usage: npx boilrplate <frontend> <backend> [database] --name <app-name> --flat`);
+  process.exit(1);
+}
+
+createAppFromStack({ frontend, backend, database, appName, flat });
