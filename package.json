@@ -26,5 +26,8 @@
     "minimist": "^1.2.8",
     "ora": "^8.2.0",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3"
   }
 }
