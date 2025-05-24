@@ -1,6 +1,6 @@
 {
   "name": "boilrplate",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Generate full-stack app boilerplate  with one command",
   "main": "node ./bin/index.js",
   "scripts": {
@@ -21,7 +21,9 @@
     "axios": "^1.8.4",
     "chalk": "^5.4.1",
     "execa": "^9.5.2",
+    "figlet": "^1.8.1",
     "fs-extra": "^11.3.0",
+    "gradient-string": "^3.0.0",
     "inquirer": "^12.5.2",
     "minimist": "^1.2.8",
     "ora": "^8.2.0",
