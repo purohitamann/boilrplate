@@ -1,49 +1,39 @@
 # boilrplate
 
-Scaffold fullstack apps instantly—prebuilt templates today, AI-powered project generation tomorrow.
+![Version](https://img.shields.io/badge/version-1.1.5-blue)
+![License](https://img.shields.io/badge/license-Apache--2.0-green)
+![Node](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen)
 
----
+> Generate full-stack app boilerplate with one command
 
-## Features
+**boilrplate** is a modern CLI tool that helps you scaffold frontend, backend, or fullstack applications instantly. Stop wasting time setting up project structures and focus on building your app.
 
-- Choose from popular stacks (Next.js, Express, MongoDB, TailwindCSS, and more)
-- Generate ready-to-run frontend and backend projects quickly
-- Automatic personalization of `.env`, `package.json`, and `README.md`
-- (Coming soon) Use natural language prompts to scaffold any project with AI
-- Simple, fast, lightweight CLI experience
+## 🚀 Features
 
----
+- **Quick setup** - Generate project scaffolding in seconds
+- **Multiple frameworks** - Support for popular frontend and backend frameworks
+- **Fullstack templates** - Create pre-configured fullstack applications
+- **Database integration** - Built-in options for different databases
+- **AI-powered setup** - Generate custom projects from natural language prompts (beta)
+- **Beautiful CLI** - Interactive prompts with visual feedback
 
-## Install or Use Directly
+## 📦 Installation
 
 ```bash
-# Use with npx (no install needed)
-npx boilrplate
-
+# Install globally
 npm install -g boilrplate
 
-boilrplate
+# Or use directly with npx
+npx boilrplate --list
+```
 
-Quick Start
-Pick a stack:
+Firebase
+📋 Examples
+Create a Next.js frontend with Express.js backend:
 
-npx boilrplate
+Create a React app with NestJS backend and MongoDB:
 
-(Coming soon) Scaffold using natural language and access code:
+Create a project in the current directory:
 
-npx boilrplate "I want a Next.js + MongoDB app" --access YOUR-ACCESS-CODE
-Roadmap
-Full AI-powered project generation (private beta)
-
-Themed starter templates (e-commerce, corporate, admin dashboard)
-
-Plugin system (add authentication, CMS, Stripe, and more)
-
-CLI analytics dashboard (opt-in only)
-
-Documentation
-View documentation at boilrplate.com/docs
-
-License
-This project is licensed under a commercial license.
-Please take a look at the Terms of Service for usage guidelines.
+📚 Documentation
+Visit heyboilrplate.com for comprehensive documentation.
