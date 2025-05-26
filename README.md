@@ -27,13 +27,5 @@ npm install -g boilrplate
 npx boilrplate --list
 ```
 
-Firebase
-📋 Examples
-Create a Next.js frontend with Express.js backend:
-
-Create a React app with NestJS backend and MongoDB:
-
-Create a project in the current directory:
-
-📚 Documentation
-Visit heyboilrplate.com for comprehensive documentation.
+## Documentation
+Visit [heyboilrplate.com](https://www.heyboilrplate.com) for comprehensive documentation.
