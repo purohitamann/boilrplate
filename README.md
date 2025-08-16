@@ -1,6 +1,6 @@
 # boilrplate CLI (Beta)
 
-![Version](https://img.shields.io/badge/version-1.1.5-blue)
+![Version](https://img.shields.io/badge/version-2.0.1-blue)
 ![License](https://img.shields.io/badge/license-Apache--2.0-green)
 ![Node](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen)
 
