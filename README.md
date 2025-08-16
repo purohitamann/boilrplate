@@ -1,4 +1,4 @@
-# boilrplate
+# boilrplate CLI (Beta)
 
 ![Version](https://img.shields.io/badge/version-1.1.5-blue)
 ![License](https://img.shields.io/badge/license-Apache--2.0-green)
@@ -6,7 +6,7 @@
 
 > Generate full-stack app boilerplate with one command
 
-**boilrplate** is a modern CLI tool that helps you scaffold frontend, backend, or fullstack applications instantly. Stop wasting time setting up project structures and focus on building your app.
+**boilrplate** is a CLI tool that helps you scaffold frontend, backend, or fullstack applications instantly. Stop wasting time setting up project structures and focus on building your app.
 
 ## 🚀 Features
 
@@ -15,7 +15,6 @@
 - **Fullstack templates** - Create pre-configured fullstack applications
 - **Database integration** - Built-in options for different databases
 - **AI-powered setup** - Generate custom projects from natural language prompts (beta)
-- **Beautiful CLI** - Interactive prompts with visual feedback
 
 ## 📦 Installation
 
@@ -25,6 +24,9 @@ npm install -g boilrplate
 
 # Or use directly with npx
 npx boilrplate --list
+
+# limited time free access to boilerplate using AI
+npx boilrplate "I want a next app and mongdb" --access BOILR-ACCESS-2025
 ```
 
 ## Documentation

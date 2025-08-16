@@ -29,14 +29,12 @@ async function runCLI() {
   const accessCode = argv.access;
   const VALID_ACCESS_CODE = 'BOILR-ACCESS-2025';
 
-  // Load stacks with a spinner for visual effect
   const loadingSpinner = createSpinner('Loading templates...');
   loadingSpinner.start();
   const stacks = await fs.readJson(join(__dirname, '../templates/stacks.json'));
-  await setTimeout(300); // Brief pause for visual effect
+  await setTimeout(300); 
   loadingSpinner.succeed('Templates loaded');
-  
-  // Handle AI mode with access code
+
   if (input && accessCode) {
     if (accessCode === VALID_ACCESS_CODE) {
       console.log(chalk.green('✅ Access code accepted! Unlocking AI-powered setup...\n'));
@@ -52,9 +50,9 @@ async function runCLI() {
     }
   }
 
-  // Handle stack selection using --list
+
   if (argv.list) {
-    // Use a gradient color for the prompt headers
+
     console.log('\n' + chalk.cyan.bold('📋 Project Configuration') + '\n');
 
     const { type } = await inquirer.prompt([
@@ -104,7 +102,6 @@ Meanwhile, explore predefined templates today!
     return createProject({ type, framework, appName });
   }
 
-  // If not using --list or --access, check for stack args
   const [frontend, backend, database] = argv._;
   const flat = argv.flat || false;
   const appName = argv.name || 'boilr-app';
@@ -132,7 +129,6 @@ function runAIMode(prompt) {
   createFullstackAppUsingAI(prompt);
 }
 
-// Catch and display any unhandled errors
 try {
   await runCLI();
 } catch (error) {
