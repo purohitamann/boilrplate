@@ -2,21 +2,26 @@
   "name": "boilrplate",
   "version": "2.0.1",
   "description": "Generate full-stack app boilerplate  with one command, beta out now!",
-  "main": "node ./bin/index.js",
+  "main": "./bin/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./bin/index.js"
+    "test": "",
+    "start": "node ./bin/index.js",
+    "genai": "node ./bin/index.js \"I want a next app\" --access BLRP-CLI-AP"
   },
   "keywords": [
-    "boilrplate"
+    "boilrplate", 
+    "scaffold",
+    "cli",
+    "GenAI",
+    "full-stack",
+    "deepseek"
   ],
-  "git": {},
   "bin": {
     "boilrplate": "./bin/index.js"
   },
   "type": "module",
   "author": "Aman Purohit",
-  "license": "Apache-2.0 license",
+  "license": "Apache-2.0",
   "dependencies": {
     "axios": "^1.8.4",
     "chalk": "^5.4.1",
@@ -31,5 +36,13 @@
   },
   "devDependencies": {
     "@types/node": "^22.15.3"
-  }
+  },
+  "repository": { "type": "git", "url": "https://github.com/purohitamann/boilrplate.git" },
+  "bugs": { "url": "https://github.com/purohitamann/boilrplate/issues" },
+  "homepage": "https://www.heyboilrplate.com",
+  "engines": { "node": ">=18.0.0" },
+  "files": ["bin/", "templates/", "README.md", "LICENSE"]
+
+
+
 }
