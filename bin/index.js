@@ -11,11 +11,12 @@ import { createFullstackAppUsingAI } from '../lib/create.js';
 import { createProject } from '../lib/create.js';
 import { createAppFromStack } from '../lib/createFromStack.js';
 import { randomWaitlistMessage } from '../lib/waitlist.js';
-import { 
-  displayWelcomeBanner, 
+import {
+  displayWelcomeBanner,
   createSpinner,
   displayError
 } from '../lib/display.js';
+import { VALID_ACCESS_CODE, DEFAULT_APP_NAME, APP_URL } from '../lib/config.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -27,7 +28,6 @@ async function runCLI() {
   const argv = minimist(process.argv.slice(2));
   const input = argv._.join(' ').trim();
   const accessCode = argv.access;
-  const VALID_ACCESS_CODE = 'BOILR-ACCESS-2025';
 
   const loadingSpinner = createSpinner('Loading templates...');
   loadingSpinner.start();
@@ -43,8 +43,8 @@ async function runCLI() {
       console.log(chalk.yellow(randomWaitlistMessage()));
       console.log(chalk.cyan(`
 📚 Check the docs for predefined templates:
-🔗 https://www.heyboilrplate.com
-📬 Or join the waitlist:  https://www.heyboilrplate.com
+🔗 ${APP_URL}
+📬 Or join the waitlist:  ${APP_URL}
 `));
       return;
     }
@@ -73,8 +73,8 @@ async function runCLI() {
       console.log(chalk.yellow(`
 🚧 AI-powered custom scaffolding is still under development!
 
-Join the waitlist and get early access:
-https://www.heyboilrplate.com
+  Join the waitlist and get early access:
+  ${APP_URL}
 
 Meanwhile, explore predefined templates today!
 `));
@@ -104,7 +104,7 @@ Meanwhile, explore predefined templates today!
 
   const [frontend, backend, database] = argv._;
   const flat = argv.flat || false;
-  const appName = argv.name || 'boilr-app';
+  const appName = argv.name || DEFAULT_APP_NAME;
 
   if (!frontend || !backend) {
     console.log(chalk.cyan.bold('\n📋 Usage Options:\n'));
