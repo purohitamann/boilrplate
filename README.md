@@ -26,7 +26,7 @@ npm install -g boilrplate
 npx boilrplate --list
 
 # limited time free access to boilerplate using AI
-npx boilrplate "I want a next app and mongdb" --access BOILR-ACCESS-2025
+npx boilrplate "I want a next app and mongdb" --access BOILR-CLI-AP
 ```
 
 ## Documentation
