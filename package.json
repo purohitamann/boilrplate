@@ -1,6 +1,6 @@
 {
   "name": "boilrplate",
-  "version": "2.0.1",
+  "version": "2.0.3",
   "description": "Generate full-stack app boilerplate  with one command, beta out now!",
   "main": "./bin/index.js",
   "scripts": {

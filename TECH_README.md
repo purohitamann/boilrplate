@@ -2,7 +2,7 @@
 
 ## Environment Variables
 
-- `BOILRPLATE_ACCESS_CODE`: Access code required to unlock AI-powered project generation. The CLI reads this value from the environment.
-- `BACKEND_URL`: Base URL used for documentation and waitlist links. Configure this to point at the backend service.
+- `BOILRPLATE_ACCESS_CODE`: access code not protected for beta
+- `BACKEND_URL`: backend hosted on cloud
 
-The CLI now relies on these variables instead of hard-coded strings in `bin/index.js`.
+
