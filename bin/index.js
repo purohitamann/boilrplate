@@ -16,7 +16,7 @@ import {
   createSpinner,
   displayError
 } from '../lib/display.js';
-import { VALID_ACCESS_CODE, DEFAULT_APP_NAME, APP_URL } from '../lib/config.js';
+import { DEFAULT_APP_NAME, BACKEND_URL } from '../lib/config.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -28,6 +28,7 @@ async function runCLI() {
   const argv = minimist(process.argv.slice(2));
   const input = argv._.join(' ').trim();
   const accessCode = argv.access;
+  const validAccessCode = process.env.BOILRPLATE_ACCESS_CODE;
 
   const loadingSpinner = createSpinner('Loading templates...');
   loadingSpinner.start();
@@ -36,15 +37,15 @@ async function runCLI() {
   loadingSpinner.succeed('Templates loaded');
 
   if (input && accessCode) {
-    if (accessCode === VALID_ACCESS_CODE) {
+    if (accessCode === validAccessCode) {
       console.log(chalk.green('✅ Access code accepted! Unlocking AI-powered setup...\n'));
       return runAIMode(input);
     } else {
       console.log(chalk.yellow(randomWaitlistMessage()));
       console.log(chalk.cyan(`
 📚 Check the docs for predefined templates:
-🔗 ${APP_URL}
-📬 Or join the waitlist:  ${APP_URL}
+🔗 ${BACKEND_URL}
+📬 Or join the waitlist:  ${BACKEND_URL}
 `));
       return;
     }
@@ -74,7 +75,7 @@ async function runCLI() {
 🚧 AI-powered custom scaffolding is still under development!
 
   Join the waitlist and get early access:
-  ${APP_URL}
+  ${BACKEND_URL}
 
 Meanwhile, explore predefined templates today!
 `));
