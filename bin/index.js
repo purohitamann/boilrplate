@@ -16,7 +16,7 @@ import {
   createSpinner,
   displayError
 } from '../lib/display.js';
-import { DEFAULT_APP_NAME, BACKEND_URL } from '../lib/config.js';
+import { DEFAULT_APP_NAME, BACKEND_URL, APP_URL } from '../lib/config.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -28,7 +28,7 @@ async function runCLI() {
   const argv = minimist(process.argv.slice(2));
   const input = argv._.join(' ').trim();
   const accessCode = argv.access;
-  const validAccessCode = process.env.BOILRPLATE_ACCESS_CODE;
+  const validAccessCode = process.env.BOILRPLATE_ACCESS_CODE || 'BLRP-CLI-AP';
 
   const loadingSpinner = createSpinner('Loading templates...');
   loadingSpinner.start();
@@ -44,8 +44,7 @@ async function runCLI() {
       console.log(chalk.yellow(randomWaitlistMessage()));
       console.log(chalk.cyan(`
 📚 Check the docs for predefined templates:
-🔗 ${BACKEND_URL}
-📬 Or join the waitlist:  ${BACKEND_URL}
+🔗 ${APP_URL}
 `));
       return;
     }
